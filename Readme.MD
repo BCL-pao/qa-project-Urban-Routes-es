@@ -81,6 +81,94 @@ Este proyecto utiliza las siguientes herramientas y bibliotecas para la creació
 
 1. **Realiza un fork del repositorio** en tu cuenta de GitHub.
 2. Clona el repositorio a tu máquina local:
-   ```bash
-   git clone https://github.com/tu-usuario/urban-routes.git
+```bash 
+git clone https://github.com/tu-usuario/urban-routes.git
+```
+   
+
+# Automated Testing for Urban Routes
+
+This project contains a set of automated tests for the **Urban Routes** application, designed to verify the correct functioning of the application in simulating various user behaviors, such as data entry and option selection.
+
+---
+
+## Table of Contents
+1. [Project Description](#project-description)
+2. [System Requirements](#system-requirements)
+3. [Test Execution](#test-execution)
+4. [Technologies Used](#technologies-used)
+5. [Contribution](#contribution)
+6. [Final Notes](#final-notes)
+
+---
+
+## Project Description
+
+These automation tests are aimed at verifying the complete flow of a user interacting with Urban Routes. The flow ranges from address setup to confirming requests in the app, simulating the following actions:
+
+- Initial address setup.
+- Selecting the Comfort fare.
+- Entering a phone number.
+- Adding a credit card.
+- Modifying order options, including:
+- Message to the driver.
+- Requesting additional items (blankets, scarves).
+- Requesting 2 ice creams.
+- Confirming the appearance of specific modals, such as the taxi search modal.
+- Waiting and checking the driver's information on the screen.
+
+---
+
+## System Requirements
+
+To run these tests, make sure you have the following installed:
+
+- Python 3.x
+- `pip` (the Python package manager)
+- Selenium WebDriver (compatible with the browser you will be using for testing)
+- Pytest
+
+Installing Dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+## Running Tests
+
+To run the automated tests for this project, follow one of the methods below:
+
+### 1. Running Tests from an IDE (such as PyCharm)
+
+1. Open the project in your IDE.
+2. Open the test file (`test.py` or the corresponding test file).
+3. Run the file from your IDE's run options.
+
+### 2. Running Tests with Pytest in the Terminal
+
+From the terminal or command line, navigate to the root folder of the project and run the following command:
+
+```bash
+pytest test.py
+```
+
+## Technologies Used
+
+This project uses the following tools and libraries for the creation and execution of automated tests:
+
+- **Python**: Main language for writing and executing test scripts.
+- **Pytest**: Testing framework used to structure, organize and execute test cases.
+- **Selenium WebDriver**: Library that allows the automation of web browsers, simulating a user's interaction with the interface.
+- **ChromeDriver / GeckoDriver**: Browser-specific drivers for Chrome and Firefox, necessary for Selenium to communicate with the browser during test execution.
+- **GitHub**: Version control and collaboration platform where the project's source code is hosted.
+
+---
+
+## Contribution
+
+Thank you for your interest in contributing to this project! To do so, follow these steps:
+
+1. **Fork the repository** in your GitHub account.
+2. Clone the repository to your local machine:
+```bash
+git clone https://github.com/your-user/urban-routes.git
 ```
