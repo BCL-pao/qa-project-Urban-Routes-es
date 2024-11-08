@@ -7,12 +7,14 @@ from_field = (By.ID, 'from')
 to_field = (By.ID, 'to')
 request_cab_btn = (
     By.XPATH, "//div[@class='results-text']//button[@type='button']")
-comfort_optn = (By.XPATH, "//*[contains(text(),'Comfort')]")
-selected_tariff = (
-    By.XPATH, "//div[@class='tariff-picker shown']//div[@class='tariff-cards']//div[@class='tcard active']//div[@class='tcard-title']")
+comfort_optn = (By.XPATH, '//*[@id="root"]/div/div[3]/div[3]/div[2]/div[1]/div[5]/div[1]/img')
+selected_tariff = (By.CSS_SELECTOR, '#root > div > div.workflow > div.workflow-subcontainer > div.tariff-picker.shown > div.tariff-cards > div.tcard.active > div.tcard-title')
+
+
 
 # Localizador codigo de confirmacion telefono y MSM
-phone_btn = (By.CLASS_NAME, "np-button")
+phone_btn = (By.CSS_SELECTOR,
+"#root > div > div.workflow > div.workflow-subcontainer > div.tariff-picker.shown > div.form > div.np-button")
 phone_field = (By.CLASS_NAME, "np-text")
 add_phone_dialog = (By.ID, "phone")
 confirm_phone = (

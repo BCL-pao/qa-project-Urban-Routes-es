@@ -43,13 +43,21 @@ class TestUrbanRoutes:
     test_driver.set_credit_card_number(data.card_number, data.card_code)
     assert test_driver.get_card_optn() is not None
 
-  # Test inserta un mensaje al conductor, 2 helados y habilita la opcion manta y pañuelos
-  def test_fill_extra_options(self):
+  # Test inserta un mensaje al conductor
+  def test_msn_extra_options(self):
     test_driver = methods.UrbanRoutesPage(self.driver)
     test_driver.fill_extra_options(data.message_for_driver)
-    assert test_driver.get_current_icecream_count_value() == "2"
     assert test_driver.get_comment_for_driver_in_field() == data.message_for_driver
+
+  # Test habilita la opcion manta y pañuelos
+  def test_blanket_and_handkerchief_extra_options(self):
+    test_driver = methods.UrbanRoutesPage(self.driver)
     assert test_driver.is_blanket_and_handkerchief_checkbox_selected() == True
+
+  # Test inserta 2 helados
+  def test_icecream_extra_options(self):
+    test_driver = methods.UrbanRoutesPage(self.driver)
+    assert test_driver.get_current_icecream_count_value() == "2"
 
   # Test pide un viaje con las opciones especificadas
   def test_book_trip(self):
